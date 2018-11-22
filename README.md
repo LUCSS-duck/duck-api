@@ -9,3 +9,8 @@ communicate over the api.
 ## The api will need to
 - Receive coordinates and compass directions from child ducks
 - Transmit coordinates and compass directions to child ducks
+
+## Resources
+- gps:
+  https://learn.adafruit.com/adafruit-ultimate-gps-on-the-raspberry-pi?view=all
+- gpio: https://github.com/metachris/RPIO
