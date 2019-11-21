@@ -14,3 +14,42 @@ communicate over the api.
 - gps:
   https://learn.adafruit.com/adafruit-ultimate-gps-on-the-raspberry-pi?view=all
 - gpio: https://github.com/metachris/RPIO
+
+## Modules
+Submodules of the program, and what they will have to do.
+
+### Position transmission system
+- Transmits the position of the mother and child duck to all other ducks
+- If all ducks are using a RPI then each duck just needs to know the coords of
+  at least the mother duck, and decides what to do itself.
+
+### Video & audio streaming system
+- Streams video and audio to an online video feed
+- The duck will play audio streamed/ sent to it (on every duck or just the
+  mother duck?)
+
+### Command distribution system
+If we're using a distributed BT5 system where not all ducks may be connected to
+eduroam but hopefully atleast one is, and all ducks are interconnected through
+bluetooth, we will need a system to have the ducks distribute commands issued
+to the entire fleet & ensure each duck has seen the command.
+
+We will also need a system that takes action to recover from when a duck has
+lost connection with all other ducks & eduroam, this could be something like
+having all ducks track the location of all other ducks, and have ducks regularly
+ping the entire swarm (ducks would relay pings), when a duck hasn't been seen
+pinging after a period of time, then the closest few ducks should attempt to
+seek the last known position of the missing duck in attempt to regain
+connection.
+
+### Autonomous roaming AI
+The ducks will roam autonomously until swarm mode is engaged, there should be a
+system that makes the ducks act like real ducks until they receive a command
+from the command distribution system to swarm to the mother duck.
+
+### Pathfinding and GPS system
+From the AI & Swarm mode systems, the ducks will need to be able to generate a
+path to get them to a desired location, using their current position and a
+system of waypoints on campus paths (we'll need to come up with something to
+generate this map of waypoints).
+
