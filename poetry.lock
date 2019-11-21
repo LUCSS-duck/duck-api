@@ -1,0 +1,16 @@
+[[package]]
+category = "main"
+description = "gpio access via the standard linux sysfs interface"
+name = "gpio"
+optional = false
+python-versions = "*"
+version = "0.3.0"
+
+[metadata]
+content-hash = "2fd6cdadd2163b3625576fb35bef96aa23fbb2fc439970f94786a3c3b81e13d6"
+python-versions = "^3.8"
+
+[metadata.files]
+gpio = [
+    {file = "gpio-0.3.0.tar.gz", hash = "sha256:0b8db65f554ad7e6733910ead6560f9800d179a73a3e4e3413e619fc334f8c7b"},
+]
