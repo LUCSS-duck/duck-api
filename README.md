@@ -6,6 +6,12 @@ The api will be hosted on the mother duck, which will be setup as a wifi router,
 child ducks will connect to the network provided by the mother duck and
 communicate over the api.
 
+## Running the web server
+
+``` shell
+poetry run uvicorn duck-api.api:app
+```
+
 ## The api will need to
 - Receive coordinates and compass directions from child ducks
 - Transmit coordinates and compass directions to child ducks
