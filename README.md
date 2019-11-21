@@ -12,6 +12,17 @@ communicate over the api.
 poetry run uvicorn duck-api.api:app
 ```
 
+## API interaction
+
+- We'll need an event processor that processes requests, `/forward` should
+  submit a request to move forward, etc.
+- Requests should be processed serially, we don't want concurrent movement
+  requests to cause the robot to enter some invalid state (motors stuck on,
+  etc).
+- Thus there should probable be an endpoint to clear all requests and if there
+  is a currently running movement request, clear the current request and
+  stopping the duck.
+
 ## The api will need to
 - Receive coordinates and compass directions from child ducks
 - Transmit coordinates and compass directions to child ducks
