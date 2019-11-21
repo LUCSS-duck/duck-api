@@ -14,6 +14,8 @@ communicate over the api.
 - gps:
   https://learn.adafruit.com/adafruit-ultimate-gps-on-the-raspberry-pi?view=all
 - gpio: https://github.com/metachris/RPIO
+- motor controller:
+  https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/
 
 ## Modules
 Submodules of the program, and what they will have to do.
