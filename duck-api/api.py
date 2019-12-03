@@ -2,7 +2,7 @@ from starlette.applications import Starlette
 from starlette.responses import JSONResponse
 from starlette.requests import HTTPConnection
 from dataclasses import dataclass
-import motorcontrol
+# import motorcontrol # Motor control functions - unrelated to my dev branch
 
 app = Starlette()
 
@@ -25,5 +25,5 @@ class movement:
         return True
     
     def finish(self):
-        motorcontrol.stop()
+        # motorcontrol.stop()
         return True
